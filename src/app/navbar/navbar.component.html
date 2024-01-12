@@ -1,0 +1,30 @@
+<!-- navbar.component.html -->
+
+<!-- navbar.component.html -->
+
+<nav class="bg-gray-800 p-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="flex items-center">
+        <a class="text-white text-lg" href="/">Logo</a>
+      </div>
+      <div [class.hidden]="!open" [class.h-screen]="open" class="hidden md:flex flex-col md:flex-row md:space-x-4">
+        <a href="#" class="text-white">Home</a>
+        <a href="#" class="text-white">About</a>
+        <a href="#" class="text-white">Services</a>
+        <a href="#" class="text-white">Contact</a>
+      </div>
+      <div class="md:hidden">
+        <button (click)="toggleNavbar()" class="text-white">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path *ngIf="!open" d="M4 6h16M4 12h16m-7 6h7"></path>
+            <path *ngIf="open" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+  
+  
